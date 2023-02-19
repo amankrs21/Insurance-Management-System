@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<style>
+
+    .main {
+        padding-left: 3%;
+        display: grid;
+    }
+
+    .abt {
+        margin-top: 430px;
+        padding-right: 3%;
+        width: 95%;
+    }
+
+    img {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+</style>
+
+<body>
+    {% include "insurance/navbar.html" %}
+    <br>
+    <div class="main">
+        <div class="abt">
+            <br><br><br><br><br>
+            <h1><u>Insurance Management System</u></h1>
+            <br>
+            <h5>Insurance Management System is an application designed for a group of insurance agents, 
+                which supports the maintenance activities of Insurance Policies and their associated 
+                company details their procedures in maintaining various types of policies, with the 
+                corresponding details of Policy holders, associated agents involved in the policy 
+                maintenance and etc. This web based system design maintains the details of the Companies 
+                offering various types of insurance policies, concerned agents and the detailed 
+                information of customers with their corresponding policies. <br>
+                The design aims at providing 
+                the agents and the customers a facility to access the information of policies their 
+                descriptions, which include starting date, renewal date, premium payable, claims 
+                information, date of maturity and etc., under various categories like Life, Motor, 
+                House Hold, House-hold items and the corresponding company details. </h5>
+            <br>
+            <h5>Our project includes a basic system for customers to inquire for policy and apply 
+                in them according to their need. System also provide features like discount on policy 
+                and also compare the price from the marked. System will also shows that which types 
+                of insurance should buy and which one should avoid.</h5>
+            <br>
+        </div>
+        <div class="img">
+            <img id="imgBanner" style="height: 500px;" alt="Unable to load image">
+        </div>
+    </div>
+    <script>
+        var picPaths = ["{% static 'image/image3.jpg' %}", "{% static 'image/image1.jpeg' %}", "{% static 'image/image2.jpg' %}", "{% static 'image/image.png' %}", "{% static 'image/image4.jpg' %}"];
+        var curPic = -1;
+        var imgO = new Array();
+        for (i = 0; i < picPaths.length; i++) {
+            imgO[i] = new Image();
+            imgO[i].src = picPaths[i];
+        }
+
+        function swapImage() {
+            curPic = (++curPic > picPaths.length - 1) ? 0 : curPic;
+            imgCont.src = imgO[curPic].src;
+            setTimeout(swapImage, 2500);
+        }
+
+        window.onload = function () {
+            imgCont = document.getElementById('imgBanner');
+            swapImage();
+        }
+    </script>
+    {% include "insurance/footer.html" %}
+</body>
+
+</html>
