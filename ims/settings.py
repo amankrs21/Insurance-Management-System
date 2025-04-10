@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'insurancemanagement.urls'
+ROOT_URLCONF = 'ims.urls'
 
 TEMPLATES = [
     {
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'insurancemanagement.wsgi.application'
+WSGI_APPLICATION = 'ims.wsgi.application'
 
 
 # Database
