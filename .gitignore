@@ -112,3 +112,5 @@ venv.bak/
 # temporary files
 *.swp
 *.swo
+
+static/profile_pic/
