@@ -102,3 +102,6 @@ This system is designed to improve and ease insurance-related services for both 
 
 ## License  
 This project is for educational purposes only.  
+
+## Project Demo  
+Watch the project demo video: [IMS.mp4](IMS.mp4)  
