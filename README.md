@@ -7,6 +7,7 @@ This project is built using the **Django MVC architecture** and aims to simplify
 
 ---
 
+
 ## Features  
 
 ### Admin Module  
@@ -98,6 +99,7 @@ This system is designed to improve and ease insurance-related services for both 
      http://127.0.0.1:8000/  
      ```  
 
+> **Note:** You can create django superuser by using command ```python manage.py createsuperuser```.
 ---
 
 ## License  
